@@ -1,0 +1,10 @@
+body 
+{
+background-color: chartreuse;    
+}
+h1{
+    text-align: center;
+    font-size: 45px;
+    color: red;
+    text-shadow: 3px 4px black;
+}
