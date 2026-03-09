@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script src='main.js'></script>
+<style>
+div 
+{
+width: 50%;
+height: auto;
+margin: auto;    
+padding: 20px;
+border:  solid 2px transparent;
+margin-top: 5%;
+}    
+fieldset
+{
+width: 70%;
+height: auto;
+padding: 10px;    
+border: solid 8px;
+}
+legend 
+{
+font-size: 30px;    
+}
+input,textarea
+{
+width: 85%;
+height: auto;
+padding: 10px;    
+}
+input[type='submit']
+{
+width: 40%;
+height: auto;
+padding: 13px;    
+background-color: blue;
+border: none;
+color: white;
+}
+input[type='reset']
+{
+width: 40%;
+height: auto;
+padding: 13px;    
+background-color: red;
+border: none;
+color: white;
+}
+</style>
+</head>
+<body>
+<div>
+<h1>Contact us Form</h1>
+<p> enter all details to send via contact form</p>
+<form action="welcome.html">
+<fieldset>
+<legend align="left">Send form details</legend>
+<input type="text" placeholder="Enter Name *" required>
+<br><br>
+<input type="email" placeholder="Enter Email *" required>
+<br><br>
+<input type="tel" placeholder="Enter Phone *" required>
+<br><br>
+<input type="text" placeholder="Enter Subject *" required>
+<br><br>
+<textarea placeholder="Enter Message *" required rows="5"></textarea>
+<br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</fieldset>
+</form>
+</div>
+</body>
+</html>
