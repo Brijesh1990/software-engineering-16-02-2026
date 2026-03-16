@@ -22,7 +22,11 @@ height: auto;
 padding: 10px;
 display: flex;
 flex-wrap: wrap;
-box-shadow: 2px 2px 2px 2px lightgray;
+top: 0;
+position: sticky;
+background-color: white;
+z-index: 5 !important;
+
 }    
 .logo 
 {
@@ -46,6 +50,120 @@ width: 20%;
 font-size: 30px;
 letter-spacing: 8px;
 }
+.navbar
+{
+width: 100%;
+height: auto;
+background-color: black;    
+}
+.navbar ul 
+{
+margin-top: 0;    
+margin-left: 26%;
+}
+.navbar ul li 
+{
+display: inline-block;    
+padding: 15px 25px;
+text-decoration: none;
+list-style-type: none;
+}
+.navbar a 
+{
+color: white;    
+text-decoration: none;
+list-style-type: none;
+font-size: 20px;
+}
+.cart
+{
+margin-left: 12%;    
+}
+.cart span 
+{
+color: red;    
+}
+.main-content
+{
+width: 100%;
+height: auto;
+margin: 0;
+padding: 0;
+margin-top: 0 !important;
+display: flex;
+flex-wrap: wrap;    
+}
+.main-content aside 
+{
+width: 20%;
+height: 100vh;
+border-right: solid 2px gray;
+padding: 0px;
+margin-top: 0;    
+top: 0;
+position: sticky;
+}
+.main-content aside ul li 
+{
+display: block;
+padding: 15px 2px;    
+}
+.main-content a 
+{
+font-size: 18px;
+text-decoration: none;
+list-style-type: none;
+color: black;    
+}
+.content 
+{
+width: 75%;
+height: auto;
+padding: 5px;    
+display: flex;
+flex-wrap: wrap;
+}
+.product-grid
+{
+width: 22%;
+height: auto;
+margin: auto;    
+text-align: center;
+margin-top: 0%;
+}
+.product-grid img 
+{
+ width: 80%;
+ height: 220px;   
+}
+.product-grid button 
+{
+border: none;
+background-color: black;
+color: white;
+padding: 8px;
+border-radius: 5px;    
+}
+.product-grid button::after 
+{
+content: "🛒";    
+}
+.footer 
+{
+width: 100%;
+height: auto;
+padding: 1px 0px;
+background-color: white;    
+border-top: solid 2px gray;
+bottom: 0;
+position: sticky;
+}
+.footer p 
+{
+text-align: center;    
+font-size: 18px;
+
+}
 </style>
 </head>
 <body>
@@ -62,20 +180,690 @@ examples : <nav> | <header> | <section> | <aside> | <footer> etc
 <div class="logo">FlipkartApp</div>
 <div class="searchbox"><input type="text" placeholder="Search here all"/></div>
 <div class="social-media">
-    <span class="bi bi-facebook"></span>
-    <span class="bi bi-instagram"></span>
-    <span class="bi bi-google"></span>
-    <span class="bi bi-whatsapp"></span>
+<span class="bi bi-facebook"></span>
+<span class="bi bi-instagram"></span>
+<span class="bi bi-google"></span>
+<span class="bi bi-whatsapp"></span>
 </div>
 </header>    
 <!-- nav -->
-<nav></nav>
+<nav class="navbar">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">services</a></li>
+<li><a href="#">contact</a></li>
+<li><a href="#">Account</a></li>
+<li class="cart"><a href="#">Cart 🛒<span>(10)</span></a></li>
+</ul>    
+</nav>
 <!--content  -->
-<section>
-<aside></aside>
-<div class="content"></div>    
+<section class="main-content">
+<aside>
+<ul>
+<li><a href="#">🌐 Dashboard</a></li>
+<li><a href="#">👤 Manage Customer</a></li>
+<li><a href="#">🛒 Add Category</a></li>
+<li><a href="#">🛒 Add SubCategory</a></li>
+<li><a href="#">🛒 Add Products</a></li>
+<li><a href="#">🚚 Manage Orders</a></li>
+<li><a href="#">⭐ Manage Feedback</a></li>
+<li><a href="#">📞 Manage Contacts</a></li>
+<li><a href="#"><span class="bi bi-power"></span> Logout ?</a></li>
+</ul>     
+</aside>
+<div class="content">
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/g/o/a/1-anlg-493-black-dd-sc-analogue-men-original-imahjnb9g5jshdu6.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/4/2/1-wtt313-alpha-traders-men-original-imahj96ahxzwjhfy.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/6/o/1-m7-1509-silver-chronograph-m7-by-metronaut-men-resized-2-original-imahcfshjutyavsv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/c/l/l/1-320-1tgfk-timewear-men-resized-2-original-imahgcmhbv8vgx82.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+
+    
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/y/m/1-roc-80-rocsil-men-original-imahdg8gfmenztff.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/p/n/3/1-m7-1509-khaki-chronograph-m7-by-metronaut-men-original-imah4e9qpetsf4nv.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/u/b/1-m7-2547-coreshift-black-resin-dualmovement-outdoorsport-m7-by-original-imahhk4nbjpej9ze.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+<div class="product-grid">
+<p><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/t/h/-original-imahfszwnamhcj98.jpeg?q=70"  alt="img"></p> 
+<p><b>wrist watch sports</b></p>
+<p>Rs. 1450-/</p>
+<p><button type="button">AddToCart</button></p>   
+</div>
+
+</div>    
 </section>
 <!-- footer -->
-<footer></footer> 
+<footer class="footer">
+<p>Copyright @ 2025-2026 all right reserved Company</p>
+</footer> 
 </body>
 </html>
