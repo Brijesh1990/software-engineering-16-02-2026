@@ -1,0 +1,21 @@
+
+body 
+{
+background-color: aquamarine;    
+}    
+div 
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+background-color: black;
+border-radius: 15px;
+padding: 25px;    
+color: white;
+}
+h1 
+{
+color: blue;
+font-size: 45px;    
+}
