@@ -81,7 +81,7 @@ return 0; //terminate a proggrames
 
 
 # what is operator in c ?
-1. operator operand some actions 
+1. operator operand some actions or operations there we used operator in c language
 2. operator operate additions | substraction | comparisions | multiplications
 3. types of operator 
 
@@ -91,8 +91,6 @@ return 0; //terminate a proggrames
 ```
 examples : + , - ,* , / , % etc
 ``` 
-
-
 2. assingment operator 
 
 **examples of assingment operator**
@@ -127,8 +125,6 @@ ex: a=10;
 b=20;
 a+=b; // a=a+b  
 ``` 	  
-
-
 6. increment / decrement  operator 
 
 **examples of increment/decrement**
@@ -147,5 +143,105 @@ sizeof :
 & : return an address of users
 ``` 		  
 
+# what is variable in c language  
 
+  1. variable is a name of memory location
+  2. variable is a container which store data information
+  3. variable is a name of memory location which store data information
+  4. variable is a name of memory location which store data information and we can change it value any time in proggrames
+
+**syntax of variable declaration in c language**
+
+```
+data_type variable_name = value; //declaration and initialization of variable
+data_type variable_name; //declaration of variable
+variable_name = value; //initialization of variable
+
+or
+
+int a=10; //declaration and initialization of variable
+int a; //declaration of variable
+a=10; //initialization of variable
+
+```
+
+# what is data types in c language
+
+1. data types is a type of data which we can store in variable
+2. data types is a type of data which we can store in variable and we can perform operations on it.
+3. data types is a type of data which we can store in variable and we can perform operations on it and we can change its value any time in proggrames i.e called data types of c language. 
+
+**types of data types in c language**
+
+1. int : it is a data type which store integer value in variable
+   ```
+   examples : 10, 20, 30, -10, -20, -30 etc
+   
+   ```
+
+2. float : it is a data type which store decimal value in variable
+   ```
+   examples : 10.5, 20.5, 30.5, -10.5, -20.5, -30.5 etc
+
+   ```
+3. char : it is a data type which store single character value in variable
+   ```
+   examples : 'a', 'b', 'c', 'A', 'B', 'C', '1', '2', '3' etc
+
+   ``` 
+
+4. double : it is a data type which store double decimal value in variable
+
+   ```
+   examples : 10.5612021, 20.555121, 30.55641, -10.565121, -20.5612121, -30.15455 etc
+   ```
+
+5. void : it is a data type which store nothing in variable
+
+   ```
+    examples : void function_name() //function which return nothing
+   ```
+
+6. enum : it is a data type which store a set of named integer constants in variable
+
+  ```
+   examples : enum week {sunday, monday, tuesday, wednesday, thursday, friday, saturday};
+  ```
+
+7. struct : it is a data type which store a set of variables of different data types in variable
+   ```
+   examples : struct student {
+   char name[50];
+   int age;
+   float marks;
+   };
+   ```
+8. union : it is a data type which store a set of variables of different data types in variable but only one variable can store value at a time
+
+9. pointer : it is a data type which store the address of variable in variable
+
+# rules for variable naming in c language
+1. variable name must start with a letter or underscore
+2. variable name can contain letters, digits and underscores
+3. variable name cannot be a reserved keyword in c language
+4. variable name cannot contain spaces
+5. variable name cannot start with a digit
+6. variable name should be meaningful and descriptive
+7. variable name should be in camelCase or snake_case or case-sensitive
+8. variable name should not be too long or too short
+
+```
+examples of variable naming in c language
+int age; //correct
+int _age; //correct
+int age1; //correct
+int 1age; //wrong
+int age$; //wrong
+int int; //wrong
+int Age; //correct
+int age_of_student; //correct
+int ageOfStudent; //correct
+int a; //correct but not meaningful
+int age; //correct but not meaningful
+```
 
