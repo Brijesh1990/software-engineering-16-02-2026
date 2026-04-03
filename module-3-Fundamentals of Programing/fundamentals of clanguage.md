@@ -245,3 +245,16 @@ int a; //correct but not meaningful
 int age; //correct but not meaningful
 ```
 
+# formatter of variables 
+
+  1. int "%d" or placeholder
+  2. float "%f" "%.2f" "%.1f" or placeholder
+  3. char "%c" 
+  4. string "%s" 
+  5. double "%lf" 
+
+
+# multiline assign variables 
+# find sizeof any variables data types (sizeof)
+
+# float a=10.65
