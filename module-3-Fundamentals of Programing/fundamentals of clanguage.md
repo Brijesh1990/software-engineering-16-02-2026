@@ -258,3 +258,157 @@ int age; //correct but not meaningful
 # find sizeof any variables data types (sizeof)
 
 # float a=10.65
+
+
+
+# what is formate specifier in c language 
+
+1. formate specifier is a placeholder which we used to print the value of variable in c language
+2. formate specifier is a placeholder which we used to print the value of variable in
+   c language and we can also use it to take input from user in c language
+
+**types of formate specifier in c language**
+
+1. int : "%d" or placeholder
+2. float : "%f" "%.2f" "%.1f" or placeholder
+3. char : "%c"
+4. string : "%s"
+5. double : "%lf"
+
+
+# what is #include "stdbool.h" in c language
+1. #include "stdbool.h" is a header file which we used to use boolean data type in c language
+2. #include "stdbool.h" is a header file which we used to use boolean data type in c language and we can also use it to take input from user in c language
+
+**examples of boolean data type in c language**
+```
+#include <stdio.h>
+#include <stdbool.h>
+int main()
+{
+    bool is_raining = true;
+    bool is_sunny = false;
+
+    printf("Is it raining? %d\n", is_raining);
+    printf("Is it sunny? %d\n", is_sunny);
+
+    return 0;
+}
+
+```
+
+# how to take input from user in c language
+
+1. scanf() function is used to take input from user in c language
+2. scanf() function is used to read the value of variable from user
+3. scanf() function is used with formate specifier to read the value of variable from user
+
+**syntax of scanf() function**
+
+scanf("%formate_specifier", &variable_name);
+
+**note : & is used to take the address of variable in scanf() function**
+
+**examples of scanf() function**
+```
+int age;
+printf("Enter your age: ");
+scanf("%d", &age);
+printf("Your age is: %d", age);
+
+float salary;
+printf("Enter your salary: ");
+scanf("%f", &salary);
+printf("Your salary is: %.2f", salary);
+
+char name[50];
+printf("Enter your name: ");
+scanf("%s", name);
+printf("Your name is: %s", name);
+
+
+```
+
+# c language conditional statements 
+
+1. conditional statements is checked true and false condition in c language
+2. conditions statements is checked true there if is esecuted and if false there else is executed in c language
+
+
+ **types of conditional statements in c language**
+1. if statement
+2. if-else statement
+3. nested if statement
+4. switch statement
+5. ternary operator or conditional operator (?"true":"false")
+6. if else if statement
+
+# what is if statement in c language
+
+1. if statement is a conditional statement which is used to check the condition in c language
+2. if statement is a conditional statement which is used to check the condition and execute the block of code if the condition is true in c language
+
+**syntax of if statement in c language**
+```
+if (condition) 
+{
+    // block of code to be executed if the condition is true
+}
+
+or
+
+
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	printf("Enter a values :");
+	scanf("%d",&a);
+	printf("Enter b values :");
+	scanf("%d",&b);
+   //check conditions 
+   if(a>b)
+   {
+     printf("a is greater than b");	
+   }	
+   return 0;
+}
+
+```
+
+2. if-else statement : if is true then if block is executed and if false then else block is executed
+
+**syntax of if-else statement in c language**
+```
+if (condition) 
+{
+    // block of code to be executed if the condition is true
+}
+else
+{
+    // block of code to be executed if the condition is false
+}
+or
+
+#include <stdio.h>
+int main()
+{
+int a,b;
+printf("Enter a values :");
+scanf("%d",&a);
+printf("Enter b values :");
+scanf("%d",&b);
+//check conditions 
+if(a>b)
+{
+printf("a is greater than b");	
+}	
+else
+{
+printf("a is less than b");	
+
+}
+return 0;
+}
+
+```
