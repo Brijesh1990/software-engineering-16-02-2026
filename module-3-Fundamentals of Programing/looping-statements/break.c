@@ -15,6 +15,8 @@ for(i=1; i<=10; i++)
  if(i==6)
  {
  	break;
+  // break is an loop controlled statements or jumping the loop 
+  	
  }
  printf("%d \n",i);	
 }
