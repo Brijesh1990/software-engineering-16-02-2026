@@ -1,22 +1,15 @@
 #include <stdio.h>
-/*
-definition:
-if :if is executed when condition is true
-syntax :
-
-if(condition)
-{
-statements;
-}
-
-*/
 int main()
 {
-//declare variables for check conditions
-int a=10, b=5;
-if(a>b)
-{
-printf("a is greter than b");
-} 
-return 0; 	
+	int a,b;
+	printf("Enter a values :");
+	scanf("%d",&a);
+	printf("Enter b values :");
+	scanf("%d",&b);
+   //check conditions 
+   if(a>b)
+   {
+     printf("a is greater than b");	
+   }	
+   return 0;
 }

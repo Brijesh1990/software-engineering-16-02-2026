@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-//intialize a variables 
+//initialize a variables 
 int i;
 //create a loop for print 1 to 5
 //for(i=0; i<=5; i++)
