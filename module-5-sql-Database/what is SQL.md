@@ -104,3 +104,56 @@ database name can not start with numbers
 | 105 | manav Mehta | Sales | 38000 | Mumbai |
 | 106 | ygendra Mehta | Sales | 38000 | Mumbai |
 | 107 | Belim | Sales | 38000 | Mumbai |
+
+
+# chart of create tables and its datatype and size
+
+
+  columnname       datatype                size 
+
+  id               int                     default-size(11)
+  name             char, varchar(0-255)
+  pasword          char, varchar(0-255)
+  address          text                    default-size(more than 65365)       
+  date             date
+  date-time        datetime
+  salary           float
+  multiple choice  enum                    enumerated datatype(multiple choice) 
+  comment          text
+  mobile           int, bigInt             int(11), bigint(20)
+
+
+
+# create table SQL query ....
+
+  **syntax** 
+
+  ```
+  create table tablename
+  (
+  columnname(id) datatype(size) auto_increment primary key,
+  columnname (name) datatype(size),
+  .
+  .
+  .
+  .
+  .  
+
+  )
+  or
+
+create table employee
+(
+empid int AUTO_INCREMENT primary key,
+employeename varchar(255),
+password varchar(255),
+age int,
+phone bigint,
+address text    
+);
+
+  ```
+
+
+
+  
