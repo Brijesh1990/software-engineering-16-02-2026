@@ -50,7 +50,6 @@
 
   1. DDL stands for data definition language 
   2. DDL used to create database | create table | alter data | drop database | drop tables | rename table | change table colunname 
-
   3. list of query in DDL .....
 
   ``` 
@@ -60,6 +59,7 @@
   4.truncate 
   5.rename 
   6.change 
+
   ```     
 
 
@@ -152,8 +152,164 @@ phone bigint,
 address text    
 );
 
+
+create table contact
+(
+id int AUTO_INCREMENT primary key,
+name varchar(255),
+email varchar(255),
+number bigint,
+subject ENUM('24x7 support','customer care support'),
+message  text    
+
+)
+
   ```
 
+# alter : alter is used to add | modify | change column name in table 
+
+  **alter**
+
+  1. add new column in table 
+
+   ```
+   alter table employee add country varchar(255)
+
+   ``` 
+  2. add new column in table after any columnname 
+
+   ```
+   alter table employee add photo varchar(255) after empid
+
+   ```
+
+   3. How to update any columnname 
+
+    ```
+     alter table employee change employeename  name varchar(255);
+    ```
+
+    4. How to remove any columnname 
+
+        ```
+        alter table employee drop age;
+        ```
+
+# rename : rename is usd to rename your table name 
+
+    5. How to rename a table 
+
+       ```
+       rename table employee to tbl_employee;
+       or
+       rename table contact to tbl_contact;
+  
+       ```    
+
+
+
+# drop : drop is used to delete a database 
+# drop is also used to delete a table 
+ 
+  **drop is used to delete structures and data both**
+
+ 1. how to drop database 
+    
+    ```
+    drop database database name
+    or
+    drop database meesho_app;
+
+    ```
+
+  2. drop table only 
+
+      ```
+      drop table tablename 
+      or 
+      drop table tbl_employee;  
+
+      ```
+
+
+# truncate : truncate is used to empty all tables data 
+
+  **truncate examples**
+
+   ```
+   truncate table tbl_contact;  
+   
+   ```
+
+   **after truncate we can not rollback data**
+
+
+# DML : dml stands for data manipluation    
+
+  **DML used to insert | delete | update data**
+
+  1. insert 
+  2. delete 
+  3. update 
+
+# insert a data in tables 
+
+  **insert a data**
+
+  1. single data insert 
+   
+     **syntax**
+     ```
+      insert into tablename(columnname1,columnname2) values('value1','value2')
+      or
+      insert into tbl_employee(photo,name,password,phone,address,country) VALUES('brijesh.jpg','brijesh','brij1651',9121212121,'150 feet ring road rajkot','india')
+
+     ```
+  2. multiple data insert    
+
+     ```
+      insert into tbl_employee(photo,name,password,phone,address,country) VALUES('manav.jpg','manav','manav1651',91212148,'150 feet ring road rajkot','india'),('ygendra.jpg','yogendra','yog651',6536548598,'150 feet ring road rajkot','india')
+     ```
+
+     ```
+     insert into tbl_employee VALUES('null','belim.jpg','belim','belim1651',91212148,'150 feet ring road rajkot','india'),('null','kumar.jpg','kumar','kumar51',6853548598,'150 feet ring road rajkot','india')
+
+     ```
+
+
+# delete a data from tables      
+  
+  **delete data**
+
+  1. delete all data from tables 
+  2. delete particular 1 rows from table 
+  3. delete alternate data from table 
+  4. delete a range of data from tables 
+
+
+  ``` 
+  all data delete 
+
+  1. delete from tbl_employee;
+
+  delete particular one data 
+
+  2. delete from tbl_employee where empid=2
+
+  delete alternate data from table 
+
+  3. delete from tbl_employee where empid in(1,4);
+
+  delete range of data from table ...
+
+  4. delete from tbl_employee where empid between 1 and 5;
+
+
+  ```
+
+# update  a data from tables      
+  
+  **update a  data**
 
 
   
