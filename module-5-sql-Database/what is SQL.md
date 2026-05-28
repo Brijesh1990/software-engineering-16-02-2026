@@ -74,7 +74,6 @@
   create database amazon_app
   ```
 
-
 **note**
 
 ```
@@ -83,7 +82,6 @@ database name should be any case
 database name can not start with numbers 
 
 ```
-
 
 # how to create table inside of database  
 
@@ -206,8 +204,6 @@ message  text
   
        ```    
 
-
-
 # drop : drop is used to delete a database 
 # drop is also used to delete a table 
  
@@ -244,7 +240,7 @@ message  text
    **after truncate we can not rollback data**
 
 
-# DML : dml stands for data manipluation    
+# DML : dml stands for data manipluation   language 
 
   **DML used to insert | delete | update data**
 
@@ -304,12 +300,73 @@ message  text
 
   4. delete from tbl_employee where empid between 1 and 5;
 
-
   ```
 
 # update  a data from tables      
   
   **update a  data**
 
+  **syntax**
 
+  ```
+  update tablename set columname='values' where id=1;
+  or 
+  update tbl_contact set name='manav', email='manav007@gmail.com',number=92545123,subject='24x7 custmer support', message='give me customer care numbers' where id=1;
+  or
+  update tbl_employee set photo='brijesh.jpg', name='nrijesh',password='b123456',phone=91212121,address='150 feet ring road rajkot',country='india' where empid=7;
+  ```
+
+
+# DQL : stands for data query language
+
+   1. data query language is used to select data 
+   2. data query language is used to fetch data 
+   3. DQL is used to select all data from tables 
+   4. select 
+
+   ```
+   1. select all data from tables 
+      examples : select * from tablename;
+                 select * from tbl_employee; 
+
+   2. select particular column name of data from tables 
+      examples : select columnname1, columnname2... from tablename;
+                 select empid,photo,name,password from tbl_employee;
+   
+   3. select particular one rows of data using its id 
+      examples :select * from tbl_employee where empid=6;
+
+   4. select particular one rows of data using its name 
+      examples :select * from tbl_employee where name='brijesh';
+                select empid,name,photo from tbl_employee where name='brijesh';
+
+   5.select alternate data or rows from tables 
+
+     examples : select * from tbl_employee where empid in (6,9,11)
+
+   6.select range of data from tables 
+
+     examples : select * from tbl_employee where empid between 7 and 11      
+
+   7. select range of data using limit
+
+    examples : select * from tbl_employee where empid limit 2,4 
+
+   8. select data or filter data of employee with name in ascending order 
+
+     **order by**
+     select * from tbl_employee  order by name asc;
+     select * from tbl_employee  order by name desc;
+     select * from tbl_employee  order by name;
+
+   9. select or search data from like operator 
+
+      **note**
+
+      search data from keyword ...
+
+      1. search a name start with 'a' letter    
+        examples : select * from tbl_employee where name like 'b%'
+
+   ```
   
